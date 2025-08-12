@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="SpotifyLines" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 756.76 206">
+  <defs>
+    <style>
+      .cls-1 {
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 12px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-miterlimit: 10;
+        stroke-width: 19px;
+      }
+    </style>
+  </defs>
+  <line id="lineTwo" class="cls-2" x1="43.03" y1="93.5" x2="43.03" y2="112.5"/>
+  <line id="lineThree" class="cls-2" x1="76.57" y1="32.5" x2="76.57" y2="173.5"/>
+  <line id="lineFour" class="cls-2" x1="110.1" y1="57.5" x2="110.1" y2="148.5"/>
+  <line id="lineFive" class="cls-2" x1="143.64" y1="21.5" x2="143.64" y2="184.5"/>
+  <line id="lineSix" class="cls-2" x1="177.17" y1="82" x2="177.17" y2="124"/>
+  <line id="lineSeven" class="cls-2" x1="210.71" y1="93.5" x2="210.71" y2="112.5"/>
+  <line id="lineEight" class="cls-2" x1="244.24" y1="21.5" x2="244.24" y2="184.5"/>
+  <line id="lineNine" class="cls-2" x1="277.78" y1="69.5" x2="277.78" y2="136.5"/>
+  <line id="lineTen" class="cls-2" x1="311.31" y1="57.5" x2="311.31" y2="148.5"/>
+  <line id="lineEleven" class="cls-2" x1="344.85" y1="82" x2="344.85" y2="124"/>
+  <line id="lineTwelve" class="cls-2" x1="378.38" y1="9.5" x2="378.38" y2="196.5"/>
+  <line id="lineThirteen" class="cls-2" x1="411.91" y1="34.5" x2="411.91" y2="171.5"/>
+  <line id="lineFourteen" class="cls-2" x1="445.45" y1="21.5" x2="445.45" y2="184.5"/>
+  <line id="lineFifteen" class="cls-2" x1="478.98" y1="21.5" x2="478.98" y2="184.5"/>
+  <line id="lineSixteen" class="cls-2" x1="512.52" y1="69.5" x2="512.52" y2="136.5"/>
+  <line id="lineSeventeen" class="cls-2" x1="546.05" y1="82" x2="546.05" y2="124"/>
+  <line id="lineEighteen" class="cls-2" x1="579.59" y1="57.5" x2="579.59" y2="148.5"/>
+  <line id="lineNinteen" class="cls-2" x1="613.12" y1="69.5" x2="613.12" y2="136.5"/>
+  <line id="lineTwenty" class="cls-2" x1="646.66" y1="82" x2="646.66" y2="124"/>
+  <line id="lineTwentyOne" class="cls-2" x1="680.19" y1="69.5" x2="680.19" y2="136.5"/>
+  <line id="lineTwentyTwo" class="cls-2" x1="713.73" y1="34.5" x2="713.73" y2="171.5"/>
+  <line id="lineTwentyThree" class="cls-2" x1="747.26" y1="93.5" x2="747.26" y2="112.5"/>
+  <g id="LineOneSpot">
+    <line id="lineOne" class="cls-2" x1="9.5" y1="93.5" x2="9.5" y2="112.5"/>
+    <text id="labelLineOne" class="cls-1" transform="translate(.58 100.73)"><tspan x="0" y="0">L1</tspan></text>
+  </g>
+</svg>

@@ -1,0 +1,1660 @@
+:root {
+    /*font*/
+    --font: 'Inter', sans-serif;
+    --font-heading:'Potta One', cursive;
+
+    /*Dark Mode Colour Theme*/
+    --background-primary-dark: black;
+    --background-secondary-dark: #494866;
+    --font-primary-dark: #f9f9f9;
+    --font-secondary-dark: #A64199;
+
+    /*Light Mode Colour Theme*/
+    --background-primary-light: #f9f9f9; 
+    --background-secondary-light: black;
+    --font-secondary-light: #A64199;
+    --font-primary-light: black;
+
+    /*switch*/
+    --width-of-switch : 80px;
+    --height-of-switch : 40px;
+    --size-of-icon : 30px;
+    --slider-offset : 8px;
+
+}
+
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+body {
+    
+    background-color: var(--background-primary-dark);
+    font-size: 25px;
+  }
+  
+  /*LIGHT MODE CHANGES*/
+
+  .light-mode {
+    background-color: var(--background-primary-light);
+    color: var(--font-primary-light);
+
+    .menuLogo{
+      background-color: #A64199;
+    }
+
+    .newAlbumHome{
+      background-color: #A64199;
+    }
+
+    .tourHome{
+      background-color: #f9f9f9;
+      border: 3px solid black;
+    }
+
+    .tourInfoRight{
+        color: black;
+    }
+
+    .tourInfoRight .tourNA{
+      border-bottom: 1px solid black;
+    }
+
+    .tourInfoRight button{
+      border: 1px solid #494866;
+    }
+
+    .subscribe h1{
+      color: black;
+    }
+
+    .subInfo button{
+      color: black;
+      border: 1px solid black;
+    }
+
+    .sponsorIMG svg{
+      fill: black;
+    }
+
+    .logo .faceLogo1{
+      display: none;
+    }
+
+    .logo .faceLogo2{
+      display: block;
+    }
+
+    .socials a{
+      color: black;
+    }
+
+    .footer .footerButtons{
+      color: black;
+    }
+
+    .footer .footerButtons button{
+      color: black;
+    }
+
+    .footer .copyRight{
+      color: black;
+    }
+
+    .pageError h1{
+      color: black;
+    }
+  
+    .pageError p{
+      color: black;
+    }
+
+    .pageError a{
+      color: black;
+    }
+
+    .updates h1{
+      color: black;
+    }
+
+    .updateInput input{
+      background-color: #f9f9f9;
+      border: 2px solid #A64199;
+      color: black;
+    }
+
+    .updateInput select{
+      background-color: #f9f9f9;
+      border: 2px solid #A64199;
+      color: black;
+    }
+
+    .updatesBTN button:hover{
+      background-color: #f9f9f9;
+      color: #A64199;
+    }
+
+    .tourLocationDates{
+      color: black;
+      font-family: var(--font);
+    }
+
+    .location-1, 
+    .location-2, 
+    .location-3, 
+    .location-4, 
+    .location-5,
+    .location-6, 
+    .location-7{
+      border-bottom: 0.5px solid black;
+    }
+  }
+
+  .light-mode .tourHome{
+    color: black;
+  }
+
+  /*LIGHT MODE CHANGES END*/
+
+  /*NAVIGATION BAR*/
+
+
+  #hamburger-icon{
+    margin: auto 0;
+    display: none;
+    cursor: pointer;
+    position: absolute;
+    z-index: 3;
+    width: 97%;
+    padding-top:2%;
+    padding-left: 3%;
+    background-color: black;
+  }
+
+  .bar1,
+  .bar2,
+  .bar3{
+    width: 35px;
+    height: 3px;
+    background-color: white;
+    margin: 6px 0;
+    transition: 0.4s;
+  }
+
+  .open .bar1{
+    -webkit-transform: rotate(-45deg) translate(-6px, 6px);
+    transform: rotate(-45deg) translate(-6px, 6px);
+  }
+
+  .open .bar2{
+    opacity: 0;
+  }
+
+  .open .bar3{
+    -webkit-transform: rotate(45deg) translate(-6px, -8px);
+    transform: rotate(45deg) translate(-6px, -8px);
+  }
+
+  .open .mobile-menu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color: black;
+  }
+
+  .mobile-menu{
+    display: none;
+    position: absolute;
+    top: 45px;
+    left: 0;
+    height: calc(50vh - 100px);
+    width: 100%;
+    z-index: 2;
+  }
+
+  .mobile-menu .mobileMainNavButtons{
+    width: 90%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+
+  .mobileMainNavButtons a{
+    font-family: var(--font);
+    font-size: 30px !important;
+    color: #f9f9f9 !important;
+    padding: 3% 0%;
+  }
+
+  .mobileMainNavButtons a:active{
+    color: #f9f9f9;
+  }
+
+  .mobile-menu .switch{
+    margin-top: 3%;
+  }
+
+  .mobileMenuLogo{
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content:end;
+    align-items: center;
+    font-family: var(--font-heading);
+    color: #f9f9f9;
+    font-size: 16px;
+    margin-top: -40px;
+    margin-left: 3%;
+  }
+
+  .mobileMenuLogo img{
+    width: 10%;
+    margin-right: 2%;
+  }
+
+  .navBar{
+    width: 100%;
+    font-family: var(--font);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+
+  .mainNavBar{
+    width: 95%;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .navBar a{
+    color: black;
+    font-weight:600;
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    text-decoration: none;
+  }
+
+  .navBar a:hover{
+    color: #A64199;
+    cursor: pointer;
+  }
+
+  .mainNavButtons{
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+  }
+
+  .menuLogo{
+    width: 20%;
+    font-family: var(--font-heading);
+    color: var(--font-primary-dark);
+    background-color: var(--background-secondary-dark);
+    position: relative;
+    display: flex;
+    font-size: 20px;
+    justify-content: end;
+    align-items: center;
+    padding: 5px 20px 5px 0px;
+    border-radius: 0px 20px 20px 0px;
+  }
+
+  .menuLogo img{
+    width:50px;
+    height: 50px;
+    margin-right: 10px;
+  }
+
+  .secondaryNavBar{
+    height:50px;
+    display: flex;
+    position: relative;
+    justify-content: end;
+    margin-right: 100px;
+  }
+
+  .secondaryNavBar a{
+    height:50px;
+    width: 50px;
+    margin-right: 50px;
+    font-size: 30px;
+    color: black;
+  }
+
+  .secondaryNavBar a:hover{
+    color: #A64199;
+  }
+
+  .switch input{
+    height: 0;
+    width: 0;
+    opacity: 0;
+  }
+
+  .switch{
+    display: block;
+    position: relative;
+    width: var(--width-of-switch);
+    height: var(--height-of-switch);
+  }
+
+  .slider{
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #303136;
+    transition: 0.4s;
+    border-radius: 30px;
+  }
+
+  .slider::before{
+    position:absolute;
+    content: "";
+    height: var(--size-of-icon, 1.4em);
+    width: var(--size-of-icon, 1.4em);
+    border-radius: 20px;
+    left: var(--slider-offset, 0.3em);
+    top: 50%;
+    transform: translateY(-50%);
+    background: #303136;
+    box-shadow: inset -3px -2px 5px -2px #8983f7, inset -10px -4px 0 0 #a3dafb;
+    transition: 0.4s;
+  }
+
+  input:checked + .slider{
+    background: #303136;
+  }
+
+  input:checked + .slider::before{
+    left: calc(100% - (var(--size-of-icon, 1.4em) + var(--slider-offset, 0.3em)));
+    background: linear-gradient( 40deg, #ff0080, #ff8c00 70%);
+    box-shadow: none;
+  }
+
+  /*FOOTER*/
+
+  .footer{
+    width: 30%;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 35%;
+    margin-top: 2%;
+    font-family: var(--font);
+  }
+
+  .footer .socials{
+    width: 70%;
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+  }
+
+  .socials a{
+    color: #f9f9f9;
+    background-color: transparent;
+    border: none;
+    font-size: 30px;
+  }
+
+  .socials a:hover{
+    color: #A64199;
+    cursor: pointer;
+  }
+
+  .footer .footerButtons{
+    color: #f9f9f9;
+    position: relative;
+    display: flex;
+    width: 50%;
+    justify-content: space-around;
+    margin-top: 3%;
+  }
+
+  .footer .footerButtons h1{
+    font-size: 20px;
+  }
+
+  .footer .footerButtons button{
+    color: #f9f9f9;
+    background-color: transparent;
+    border: none;
+    font-size: 15px;
+  }
+
+  .footer .footerButtons button:hover{
+    color: #A64199;
+    cursor: pointer;
+  }
+
+  .footer .copyRight{
+    color: #f9f9f9;
+    font-size: 15px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+  }
+
+  /*HOME PAGE START*/
+
+  .header{
+    width: 100%;
+    height: 80%;
+    position: absolute;
+    top: -10%;
+    z-index: -1;
+  }
+
+  .header img{
+    width: 100%;
+  }
+
+  .newAlbumHome{
+    width: 100%;
+    position: relative;
+    display: flex;
+    background-color: #494866;
+    margin-top: 35%;
+    padding: 3% 0px;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .newAlbumHomeLeft{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    padding-left: 10%;
+  }
+
+  .newAlbumHomeLeft .newAlbumHomeHeading{
+    position: relative;
+    display: flex;
+  }
+
+  .newAlbumHomeHeading img{
+    height: 70%;
+    position: absolute;
+    left:-25%;
+  }
+  
+  .newAlbumHomeHeading h1{
+    font-family: var(--font-heading);
+    text-align: end;
+    font-size: 80px;
+    color: #f9f9f9;
+  }
+
+  .newAlbumHomeButton{
+    margin-left: -8%;
+    width: 95%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+  .newAlbumHomeButton button{
+    background-color: #f9f9f9;
+    padding: 5px 30px;
+    font-family: var(--font);
+    border-radius: 5px;
+    height: 40px;
+    border: none;
+  }
+
+  .newAlbumHomeButton button:hover{
+    border: 2px solid #f9f9f9;
+    color: #f9f9f9;
+    background-color: #494866;
+    cursor: pointer;
+  }
+
+  .newAlbumHomeRight img{
+    width: 60%;
+    margin-left: 15%;
+  }
+
+  .tourBackground{
+    width: 100%;
+    padding: 2% 0%;
+  }
+
+  .tourHome{
+    width: 50%;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    flex-direction: column;
+    margin: 3% 0% 3% 25%;
+    border: 3px solid #f9f9f9;
+    border-radius: 10px;
+    padding: 2% 0%;
+    background-color: black;
+  }
+
+  .tourHeadingImage{ 
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: -10%;
+  }
+
+  .tourInfo{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    color: #f9f9f9;
+  }
+
+  .tourInfoRight{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-left: 5%;
+  }
+
+  .tourInfoRight .tourNA{
+    border-bottom: 1px solid #f9f9f9;
+    padding-bottom: 2%;
+  }
+
+  .tourInfoRight h1{
+    font-family: var(--font-heading);
+    padding-bottom: 5%;
+    font-size: 40px;
+  }
+
+  .tourInfoRight p{
+    font-family: var(--font);
+    font-size: 20px;
+    padding-bottom: 2%;
+  }
+
+  .tourInfo img{
+    width: 150%;
+  }
+
+  .tourInfoRight button{
+    background-color: #f9f9f9;
+    padding: 5px 30px;
+    font-family: var(--font);
+    border-radius: 5px;
+    height: 40px;
+    margin-left: 70%;
+    border: none;
+  }
+
+  .tourInfoRight button:hover{
+    color: #f9f9f9;
+    background-color: #494866;
+    cursor: pointer;
+  }
+
+  /* ------START OF SPOTIFY LINK------ */
+
+  .spotifyLink{
+    position: absolute;
+    display: flex;
+    height: 40%;
+    width: 100%;
+    top: 0;
+    background-color: #d4c59c;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .spotifyHeading{
+    width: 100%;
+    background-color: #d4c59c;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spotifyHeading h1{
+    font-family: var(--font-heading);
+    margin-bottom: 3%;
+    font-size: 3.5vw;
+    font-weight: 300;
+  }
+
+  .spotifyIMG{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .spotifyIMG button{
+    background-color: transparent;
+    border: none;
+    font-size: 11vw;
+    margin-right: 4vw;
+  }
+
+    /* ------SLIDER IMAGE ------ */
+
+    .container{
+      box-sizing: border-box;
+      font-family: var(--font-heading);
+      font-weight: 200;
+      position: relative;
+      width: 100%;
+      height: 100%;
+      margin-top: 5% auto;
+    }
+  
+    .radioIMG{
+      display: none;
+    }
+  
+    .imageSlider{
+      width: 100%;
+      position: absolute;
+      height: 1200px;
+      overflow: hidden;
+    }
+  
+    .slideIMG{
+      position: absolute;
+      width: 100%;
+      height: 41.5%;
+      top:43%;
+      left:0;
+      opacity: 0;
+      z-index: 2;
+    }
+
+    .slideIMG iframe{
+      width: 100%;
+      height: 100%;
+      transform: translateX(100%);
+      transition: 1.3s;
+    }
+    
+    .dots{
+      width: 35.5%;
+      height:20.9%;
+      position: absolute;
+      top: 19%;
+      left:39.6%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+  
+    .dots label{
+      width: 2.8%;
+      background: transparent;
+      border-radius: 10px;
+      opacity: 1;
+      cursor: pointer;
+      transition: 0.2s ease-in-out;
+    }
+  
+    .dots label:hover{
+      opacity: 0.7;
+      background-color: #d4c59c;
+    }
+  
+    .dot-1, .dot-2, .dot-23{
+      height: 20%;
+    }
+  
+    .dot-3{
+      height: 80%;
+    }
+  
+    .dot-4, .dot-10, .dot-18{
+      height: 60%;
+    }
+  
+    .dot-5, .dot-14, .dot-15{
+      height: 90%;
+    }
+  
+    .dot-6, .dot-11, .dot-17, .dot-20{
+      height:30%;
+    }
+  
+    .dot-7{
+      height: 20%;
+    }
+  
+    .dot-8{
+      height:90%;
+    }
+  
+    .dot-9, .dot-16, .dot-19, .dot-21{
+      height:45%;
+    }
+  
+    .dot-12{
+      height: 100%;
+    }
+  
+    .dot-13, .dot-22{
+      height:78%;
+    }
+  
+    #radio-1:checked ~ #slideIMG-1,
+    #radio-2:checked ~ #slideIMG-2,
+    #radio-3:checked ~ #slideIMG-3,
+    #radio-4:checked ~ #slideIMG-4,
+    #radio-5:checked ~ #slideIMG-5,
+    #radio-6:checked ~ #slideIMG-6,
+    #radio-7:checked ~ #slideIMG-7,
+    #radio-8:checked ~ #slideIMG-8,
+    #radio-9:checked ~ #slideIMG-9,
+    #radio-10:checked ~ #slideIMG-10,
+    #radio-11:checked ~ #slideIMG-11,
+    #radio-12:checked ~ #slideIMG-12,
+    #radio-13:checked ~ #slideIMG-13,
+    #radio-14:checked ~ #slideIMG-14,
+    #radio-15:checked ~ #slideIMG-15,
+    #radio-16:checked ~ #slideIMG-16,
+    #radio-17:checked ~ #slideIMG-17,
+    #radio-18:checked ~ #slideIMG-18,
+    #radio-19:checked ~ #slideIMG-19,
+    #radio-20:checked ~ #slideIMG-20,
+    #radio-21:checked ~ #slideIMG-21,
+    #radio-22:checked ~ #slideIMG-22,
+    #radio-23:checked ~ #slideIMG-23{
+      opacity: 1;
+    }
+  
+    #radio-1:checked ~ #slideIMG-1 iframe,
+    #radio-2:checked ~ #slideIMG-2 iframe,
+    #radio-3:checked ~ #slideIMG-3 iframe,
+    #radio-4:checked ~ #slideIMG-4 iframe,
+    #radio-5:checked ~ #slideIMG-5 iframe,
+    #radio-6:checked ~ #slideIMG-6 iframe,
+    #radio-7:checked ~ #slideIMG-7 iframe,
+    #radio-8:checked ~ #slideIMG-8 iframe,
+    #radio-9:checked ~ #slideIMG-9 iframe,
+    #radio-10:checked ~ #slideIMG-10 iframe,
+    #radio-11:checked ~ #slideIMG-11 iframe,
+    #radio-12:checked ~ #slideIMG-12 iframe,
+    #radio-13:checked ~ #slideIMG-13 iframe,
+    #radio-14:checked ~ #slideIMG-14 iframe,
+    #radio-15:checked ~ #slideIMG-15 iframe,
+    #radio-16:checked ~ #slideIMG-16 iframe,
+    #radio-17:checked ~ #slideIMG-17 iframe,
+    #radio-18:checked ~ #slideIMG-18 iframe,
+    #radio-19:checked ~ #slideIMG-19 iframe,
+    #radio-20:checked ~ #slideIMG-20 iframe,
+    #radio-21:checked ~ #slideIMG-21 iframe,
+    #radio-22:checked ~ #slideIMG-22 iframe,
+    #radio-23:checked ~ #slideIMG-23 iframe{
+      transform: translateX(0);
+    }
+  
+    #radio-1:checked ~ #slideIMG-1 #label-1,
+    #radio-2:checked ~ #slideIMG-2 #label-2,
+    #radio-3:checked ~ #slideIMG-3 #label-3,
+    #radio-4:checked ~ #slideIMG-4 #label-4,
+    #radio-5:checked ~ #slideIMG-5 #label-5,
+    #radio-6:checked ~ #slideIMG-6 #label-6,
+    #radio-7:checked ~ #slideIMG-7 #label-7,
+    #radio-8:checked ~ #slideIMG-8 #label-8,
+    #radio-9:checked ~ #slideIMG-9 #label-9,
+    #radio-10:checked ~ #slideIMG-10 #label-10,
+    #radio-11:checked ~ #slideIMG-11 #label-11,
+    #radio-12:checked ~ #slideIMG-12 #label-12,
+    #radio-13:checked ~ #slideIMG-13 #label-13,
+    #radio-14:checked ~ #slideIMG-14 #label-14,
+    #radio-15:checked ~ #slideIMG-15 #label-15,
+    #radio-16:checked ~ #slideIMG-16 #label-16,
+    #radio-17:checked ~ #slideIMG-17 #label-17,
+    #radio-18:checked ~ #slideIMG-18 #label-18,
+    #radio-19:checked ~ #slideIMG-19 #label-19,
+    #radio-20:checked ~ #slideIMG-20 #label-20,
+    #radio-21:checked ~ #slideIMG-21 #label-21,
+    #radio-22:checked ~ #slideIMG-22 #label-22,
+    #radio-23:checked ~ #slideIMG-23 #label-23{
+      background: #ffeb3b;
+      opacity: 1;
+    }
+
+ /* ------END OF SPOTIFY LINK------ */
+
+  .bannerIMG{
+   width: 100%;
+   position: relative;
+   display: flex;
+   margin-top: 23%;
+  }
+
+  .bannerIMG img{
+    width: 100%;
+  }
+
+  .subscribe{
+    position: relative;
+    width: 40%;
+    text-align: center;
+    margin: 3% 0% 3% 30%;
+  }
+
+  .subscribe h1{
+    font-family: var(--font-heading);
+    font-weight: 400;
+    color: #f9f9f9;
+    margin-bottom: 2%;
+    font-size: 40px;
+  }
+
+  .subscribe .subInfo{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .subInfo input{
+    width: 40%;
+    padding: 1.5%;
+    background-color: #f9f9f9;
+    margin-bottom: 1%;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin-top: 2%;
+  }
+
+  .subInfo button{
+    color: #f9f9f9;
+    background-color: transparent;
+    border: 1px solid #f9f9f9;
+    font-size: 20px;
+    padding: 1%;
+    border-radius: 10px;
+    margin-top: 1%;
+  }
+
+  .subInfo button:hover{
+    border: 1px solid #494866;
+    background-color: #494866;
+    color: #f9f9f9;
+    cursor: pointer;
+  }
+
+  .sponsors{
+    width: 100%;
+    height:100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .sponsors .logo{
+    display: flex;
+    position: relative;
+    width: 50%;
+    justify-content: center;
+    margin-bottom: 2%;
+  }
+
+  .logo img{
+    width: 100px;
+  }
+
+  .logo .faceLogo2{
+    display: none;
+  }
+
+  .sponsorIMG{
+    width: 30%;
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .sponsorIMG svg{
+    fill:#f9f9f9;
+    width: 80%;
+    padding-left: 10%;
+  }
+
+  /*HOME PAGE END*/
+
+  /*TOUR PAGE START*/
+
+  .updates{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    margin: 5% 0% 5% 24%;
+  }
+
+  .updates h1{
+    font-family: var(--font-heading);
+    font-weight: 200;
+    font-size: 25px;
+    color: #f9f9f9;
+    text-align: center;
+    margin-bottom: 1%;
+  }
+
+  .updates .updateInput{
+    position: relative;
+    width: 50%;
+    padding-left: 2%;
+    font-family: var(--font);
+    margin-top: 1%;
+  }
+
+  .updateInput input{
+    width: 45%;
+    height: 40px;
+    padding-left: 1%;
+    border-radius: 10px;
+    background-color: black;
+    border: 2px solid #A64199;
+    color: #f9f9f9;
+    margin-left: 2.5%;
+  }
+
+  .updateInput input:hover{
+    border: 2px solid #494866;
+    cursor: pointer;
+  }
+
+  .updateInput select{
+    width: 45%;
+    height: 44px;
+    padding: 1%;
+    border-radius: 10px;
+    background-color: black;
+    border: 2px solid #A64199;
+    color: #f9f9f9;
+  }
+
+  .updateInput select:hover{
+    border: 2px solid #494866;
+    cursor: pointer;
+  }
+
+  .updateInput .updatesBTN{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+  }
+
+  .updatesBTN button{
+    padding: 1%;
+    width: 20%;
+    background-color: #A64199;
+    border: 2px solid #A64199;
+    border-radius: 8px;
+    font-family: var(--font);
+    font-weight: bold;
+    color: #f9f9f9;
+    text-transform: uppercase;
+    margin-top: 2%;
+    }
+
+    .updatesBTN button:hover{
+      cursor: pointer;
+      background-color: black;
+    }
+
+    .tourLocationDates{
+      color: #f9f9f9;
+    }
+
+    .location-1, 
+    .location-2, 
+    .location-3, 
+    .location-4, 
+    .location-5,
+    .location-6, 
+    .location-7{
+      position: relative;
+      display: flex;
+      margin-bottom: 2.5%;
+      width: 80%;
+      justify-content: space-between;
+      margin-left: 10%;
+      align-items: center;
+      border-bottom: 0.5px solid #f9f9f9;
+      padding-bottom: 2.5%;
+    }
+
+    .location-1 .locationDate, 
+    .location-2 .locationDate, 
+    .location-3 .locationDate, 
+    .location-4 .locationDate, 
+    .location-5 .locationDate,
+    .location-6 .locationDate, 
+    .location-7 .locationDate{
+      width: 40%;
+    }
+
+    .location-1 .locationName, 
+    .location-2 .locationName, 
+    .location-3 .locationName, 
+    .location-4 .locationName, 
+    .location-5 .locationName,
+    .location-6 .locationName, 
+    .location-7 .locationName{
+      width: 40%;
+    }
+
+    .location-1 button, 
+    .location-2 button, 
+    .location-3 button, 
+    .location-4 button, 
+    .location-5 button,
+    .location-6 button, 
+    .location-7 button{
+      background-color: #494866;
+      border: 2px solid #494866;
+      color: #f9f9f9;
+      padding: 15px 25px;
+      text-transform: uppercase;
+      border-radius: 10px;
+    }
+
+    .location-1 button:hover, 
+    .location-2 button:hover, 
+    .location-3 button:hover, 
+    .location-4 button:hover, 
+    .location-5 button:hover,
+    .location-6 button:hover, 
+    .location-7 button:hover{
+      cursor: pointer;
+      background-color: black;
+    }
+
+  /*TOUR PAGE END*/
+
+  /*MUSIC PAGE START*/
+
+  .otherHeader{
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 0;
+    z-index: -1;
+  }
+
+  .otherHeader img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .music{
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    align-items: center;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    margin: 5% 0% 3% 30%;
+  }
+
+  .music h1{
+    font-family: var(--font-heading);
+    font-weight: 100;
+  }
+
+  .music .musicBTN{
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .musicBTN a{
+    width: 40%;
+    margin: 2% 0%;
+    padding: 0% 2%;
+    border-radius: 10px;
+  }
+
+  .musicBTN a:hover{
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    cursor: pointer;
+    background-color: #595a5a17;
+  }
+
+  .musicBTN img{
+    width: 100%;
+    object-fit: cover;
+  }
+
+  /*MUSIC PAGE END*/
+
+  /*STORE PAGE START*/
+
+  /*STORE PAGE END*/
+
+  /*BIO PAGE START*/
+
+
+  .pageError{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 2%;
+    display: flex;
+    position: relative;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2% 0%;
+    border-radius: 10px;
+  }
+
+  .pageError img{
+    width: 40%;
+    margin-left: 5%;
+    
+  }
+
+  .pageError .returnHome{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 5%;
+  }
+
+  .pageError h1{
+    color: #f9f9f9;
+    font-family: var(--font);
+    text-align: center;
+    padding-bottom: 2%;
+  }
+
+  .pageError p{
+    color: #f9f9f9;
+    font-family: var(--font);
+    text-align: center;
+    padding-bottom:1%;
+    
+  }
+
+  .pageError a{
+    width: 20%;
+    text-decoration: none;
+    font-family: var(--font);
+    border: 2px solid #494866;
+    padding: 1%;
+    border-radius: 10px;
+    color: #f9f9f9;
+    margin-top: 1%;
+  }
+
+  .pageError a:hover{
+    background-color: #494866;
+    color: black;
+    cursor: pointer;
+  }
+
+  /*BIO PAGE END*/
+
+  @media only screen and (max-width: 1440px)  {
+
+    .body{ background-color: red !important;}
+
+    .menuLogo{
+      width: 30%;
+    }
+
+    .secondaryNavBar a{
+      margin-right: 10px;
+    }
+
+    .tourHome{
+      width: 80%;
+      margin: 3% 0% 3% 10%;
+    }
+
+    .spotifyIMG{
+      width: 80%;
+    }
+
+
+  .bannerIMG{
+    width: 100%;
+    position: relative;
+    display: flex;
+    margin-top: 23%;
+   }
+
+   .bannerIMG{
+    margin-top: 35%;
+   }
+
+   .subscribe{
+    width: 60%;
+    margin: 3% 0% 3% 20%;
+  }
+
+  .sponsorIMG{
+    width: 50%;
+  }
+
+  .footer{
+    width: 60%;
+    margin-left: 20%;
+  }
+
+  .updatesBTN button{
+    width: 40%;
+    }
+
+    .otherHeader{
+      height: 150px
+    }
+
+    .music{
+      width: 60%;
+      margin: 5% 0% 3% 20%;
+    }
+
+    .pageError a{
+      width: 40%;
+      text-align: center;
+    }
+
+  }
+
+  @media only screen and (max-width: 1024px) {
+
+    .menuLogo{
+      width: 40%;
+    }
+
+    .secondaryNavBar{
+      margin-right: 0px;
+      margin-top: -20px;
+    }
+
+    .header{
+      top: -5%;
+    }
+
+    .newAlbumHomeHeading img{
+      height: 80%;
+      left:-20%;
+      top: -15%;
+    }
+
+    .newAlbumHomeHeading h1{
+      font-size: 55px;
+      width: 350px;
+    }
+
+    .newAlbumHomeRight img{
+      width: 80%;
+      margin-left: 15%;
+    }
+
+    .newAlbumHomeButton{
+      width: 100%;
+    }
+
+    .tourHome{
+      width: 95%;
+      margin: 3% 0% 3% 2.5%;
+    }
+
+    .spotifyLink{
+      height: 30%;
+    }
+
+    .spotifyHeading h1{
+      font-size: 50px;
+    }
+
+    .updates{
+      width: 60%;
+      margin: 5% 0% 5% 20%;
+    }
+
+    .music{
+      width: 70%;
+      margin: 5% 0% 3% 15%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) {
+    .menuLogo h1{
+      font-size: 30px;
+    }
+
+    .navBar a{
+      font-size: 20px;
+    }
+
+    .secondaryNavBar a{
+      margin-right: 5px;
+    }
+
+    .switch{
+      width: 70px;
+      height: 30px;
+      padding-top: 5px;
+      margin-top: -5px;
+      margin-right: 5px;
+    }
+
+    .newAlbumHomeHeading img{
+      height: 70%;
+      left: -10%;
+      top:0%;
+    }
+
+    .tourInfo img{
+      display: none;
+    }
+
+    .tourInfoRight{
+      padding-left: 0%;
+      margin-left: -20%;
+    }
+
+    .spotifyLink{
+      height: 22%;
+    }
+
+    .subscribe{
+      width: 80%;
+      margin: 3% 0% 3% 10%;
+    }
+
+    .subscribe h1{
+      font-size: 30px;
+    }
+
+    .footer .footerButtons{
+      width: 60%;
+    }
+
+    .updates{
+      width: 90%;
+      margin: 10% 0% 5% 5%;
+    }
+
+    .updates h1{
+      font-size: 20px;
+    }
+
+    .music{
+      width: 90%;
+      margin: 10% 0% 3% 5%;
+    }
+
+    .pageError{
+      width: 90%;
+      margin-left: 5%;
+    }
+
+  }
+
+  @media only screen and (max-width: 425px){
+
+    .navBar{
+      margin-top: 0px;
+    }
+
+  .mainNavBar{
+    display: none;
+  }
+
+  .secondaryNavBar{
+    display: none;
+  }
+
+    .header{
+      top: 40px;
+    }
+
+    #hamburger-icon{
+      display: block ;
+    }
+
+    .newAlbumHome{
+      margin-top: 50%;
+    }
+
+    .newAlbumHomeRight img{
+     display: none;
+    }
+
+    .tourHome{
+      margin: 10% 0% 3% 1%;
+    }
+
+    .tourHeadingImage{ 
+      margin-top: -15%;
+    }
+
+    .tourHeadingImage img{ 
+      width: 70%;
+    }
+
+    .tourInfoRight{
+      width: 90%;
+    }
+
+    .tourInfoRight h1{
+      font-size: 30px;
+    }
+
+    .tourInfoRight button{
+      width: 50%;
+      margin-left: 55%;
+    }
+
+    .spotifyLink{
+      height: 12%;
+    }
+
+    .spotifyHeading h1{
+      font-size: 30px;
+    }
+
+    .subscribe{
+      width: 95%;
+      margin: 3% 0% 3% 2.5%;
+    }
+
+    .subscribe h1{
+      font-size: 25px;
+    }
+
+    .footer .footerButtons{
+      width: 100%;
+    }
+
+    .otherHeader{
+      display: none;
+    }
+
+    .updates{
+      background-color: #494866;
+      width: 100%;
+      margin: 15% 0% 5% 0%;
+    }
+
+    .updates h1{
+      font-size: 17px;
+      width: 90%;
+      padding-top: 5%;
+    }
+
+    .updates .updateInput{
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 90%;
+      align-items: center;
+    }
+
+    .updateInput input{
+      width: 90%;
+      background-color: #f9f9f9;
+      border: 2px solid black;
+      color: black;
+      margin-bottom: 3%;
+      margin-left: 0%;
+    }
+
+    .updateInput select{
+      width: 92%;
+      height: 44px;
+      padding: 1%;
+      border-radius: 10px;
+      background-color: #f9f9f9;
+      border: 2px solid black;
+      color: black;
+    }
+
+    .updatesBTN{
+      width: 80%;
+      margin-bottom: 3%;
+      }
+
+    .updatesBTN button{
+      width: 100%;
+      font-size: 16px;
+      }
+
+      .location-1, 
+      .location-2, 
+      .location-3, 
+      .location-4, 
+      .location-5,
+      .location-6, 
+      .location-7{
+        flex-direction: column;
+        width: 95%;
+        margin-left: 2.5%;
+        text-align: center;
+      }
+
+    .location-1 .locationDate, 
+    .location-2 .locationDate, 
+    .location-3 .locationDate, 
+    .location-4 .locationDate, 
+    .location-5 .locationDate,
+    .location-6 .locationDate, 
+    .location-7 .locationDate{
+      width: 90%;
+      font-family: var(--font);
+    }
+
+    .location-1 .locationName, 
+    .location-2 .locationName, 
+    .location-3 .locationName, 
+    .location-4 .locationName, 
+    .location-5 .locationName,
+    .location-6 .locationName, 
+    .location-7 .locationName{
+      width: 90%;
+      font-family: var(--font);
+      font-size: 18px;
+      margin-top: 3%;
+    }
+
+    .location-1 .locationDate p,  
+    .location-2 .locationDate p, 
+    .location-3 .locationDate p, 
+    .location-4 .locationDate p, 
+    .location-5 .locationDate p,
+    .location-6 .locationDate p, 
+    .location-7 .locationDate p{
+      margin-top: 3%;
+    }
+
+    .location-1 .locationBTN, 
+    .location-2 .locationBTN, 
+    .location-3 .locationBTN, 
+    .location-4 .locationBTN, 
+    .location-5 .locationBTN,
+    .location-6 .locationBTN, 
+    .location-7 .locationBTN{
+      width: 50%;
+      margin-top: 3%;
+    }
+
+    .location-1 button, 
+    .location-2 button, 
+    .location-3 button, 
+    .location-4 button, 
+    .location-5 button,
+    .location-6 button, 
+    .location-7 button{
+      width: 100%;
+      font-size: 20px;
+      padding: 10px 25px;
+    }
+
+    .footer{
+      width: 80%;
+      margin-left: 10%;
+    }
+
+    .footer .socials{
+      width: 100%;
+    }
+
+    .music{
+      margin: 15% 0% 3% 5%;
+    }
+
+    .music h1{
+      font-family: var(--font-heading);
+      font-weight: 100;
+      font-size:30px;
+      text-align: center;
+    }
+
+    .musicBTN a{
+      width: 90%;
+      margin: 0%;
+      padding: 0%;
+    }
+
+    .pageError{
+      margin-top: 15%;
+    }
+  }
+
+
+
+
+
+
+ 
